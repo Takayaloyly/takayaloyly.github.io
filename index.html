@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SUGOITORI</title>
+  <meta name="description" content="SUGOITORIの公式サイト。アプリ、グッズ、サポート情報をまとめています。">
+  <meta name="theme-color" content="#f7c948">
+  <style>
+    :root {
+      --bg: #fffaf0;
+      --paper: #ffffff;
+      --ink: #1f1f1f;
+      --sub: #6d665e;
+      --line: #eadfca;
+      --accent: #f3b61f;
+      --accent2: #ff7a1a;
+      --shadow: 0 14px 40px rgba(67, 48, 13, .08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Yu Gothic", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top right, rgba(243,182,31,.18), transparent 30%),
+        linear-gradient(180deg, #fffdf8 0%, var(--bg) 100%);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; }
+    .wrap { width: min(1080px, calc(100% - 32px)); margin: 0 auto; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(12px);
+      background: rgba(255, 250, 240, .86);
+      border-bottom: 1px solid rgba(234, 223, 202, .8);
+    }
+
+    nav {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      text-decoration: none;
+      font-weight: 900;
+      letter-spacing: .06em;
+      font-size: 1.15rem;
+    }
+
+    .navlinks { display: flex; gap: 18px; flex-wrap: wrap; }
+    .navlinks a { text-decoration: none; color: var(--sub); font-size: .92rem; }
+
+    .hero {
+      padding: 92px 0 68px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(243, 182, 31, .16);
+      color: #7a5200;
+      font-weight: 800;
+      font-size: .82rem;
+      letter-spacing: .06em;
+    }
+
+    h1 {
+      margin: 18px 0 12px;
+      font-size: clamp(3.1rem, 10vw, 6.2rem);
+      line-height: .95;
+      letter-spacing: -.04em;
+    }
+
+    .hero p {
+      margin: 0 auto;
+      max-width: 690px;
+      color: var(--sub);
+      font-size: clamp(1rem, 2.6vw, 1.25rem);
+    }
+
+    .hero-actions {
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 800;
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .button.primary {
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #211600;
+      box-shadow: var(--shadow);
+    }
+
+    section { padding: 28px 0 56px; }
+    h2 { margin: 0 0 8px; font-size: clamp(1.9rem, 4vw, 2.6rem); }
+    .section-lead { margin: 0 0 24px; color: var(--sub); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: rgba(255,255,255,.92);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 { margin: 0 0 8px; font-size: 1.35rem; }
+    .card p { margin: 0 0 16px; color: var(--sub); }
+    .card small { color: #8b8278; }
+    .card a.link { font-weight: 800; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+    .app-card {
+      background:
+        linear-gradient(135deg, rgba(243,182,31,.18), rgba(255,122,26,.08)),
+        #fff;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: .75rem;
+      font-weight: 800;
+      background: #fff3cd;
+      color: #755000;
+    }
+
+    .legal {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .legal a {
+      display: block;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255,255,255,.8);
+      text-decoration: none;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    footer {
+      padding: 32px 0 52px;
+      color: var(--sub);
+      text-align: center;
+      font-size: .9rem;
+    }
+
+    @media (max-width: 720px) {
+      .navlinks { gap: 12px; }
+      .grid, .legal { grid-template-columns: 1fr; }
+      .hero { padding-top: 72px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="#top">SUGOITORI</a>
+        <div class="navlinks">
+          <a href="#apps">Apps</a>
+          <a href="#goods">Goods</a>
+          <a href="#links">Links</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="wrap">
+      <section class="hero">
+        <span class="eyebrow">APPS & GOODS FROM JAPAN</span>
+        <h1>SUGOITORI</h1>
+        <p>ちょっと変で、ちゃんと楽しい。SUGOITORIは、どうぶつを中心にしたアプリやグッズを作っています。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#apps">アプリを見る</a>
+          <a class="button" href="https://sugoitori.stores.jp/" target="_blank" rel="noopener noreferrer">グッズを見る</a>
+        </div>
+      </section>
+
+      <section id="apps">
+        <h2>Apps</h2>
+        <p class="section-lead">SUGOITORIのアプリ。</p>
+        <div class="grid">
+          <article class="card app-card">
+            <span class="tag">iPhone</span>
+            <h3>タップでマッチョ</h3>
+            <p>10秒間ひたすら連打。かわいいどうぶつを限界までマッチョにする、シンプルなタップゲーム。</p>
+            <a class="link" href="/tap-muscle.html">詳しく見る →</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">Coming next</span>
+            <h3>More apps coming</h3>
+            <p>新しいゲームや小さなアプリを順次追加していきます。</p>
+            <small>Follow @sugoitori for updates.</small>
+          </article>
+        </div>
+      </section>
+
+      <section id="goods">
+        <h2>Goods</h2>
+        <p class="section-lead">画面の外にも、変などうぶつ。</p>
+        <div class="grid">
+          <article class="card">
+            <h3>鍛えすぎたどうぶつ</h3>
+            <p>ひよこ、パンダ、ねこ、シマエナガなど、妙に鍛えすぎたどうぶつたちのグッズを制作しています。</p>
+            <a class="link" href="https://sugoitori.stores.jp/" target="_blank" rel="noopener noreferrer">SUGOITORI STORE →</a>
+          </article>
+
+          <article class="card">
+            <h3>Instagram</h3>
+            <p>新作、制作風景、イベント情報などはこちら。</p>
+            <a class="link" href="https://www.instagram.com/sugoitori/" target="_blank" rel="noopener noreferrer">@sugoitori →</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="links">
+        <h2>Support & Legal</h2>
+        <p class="section-lead">アプリのサポートと各種ポリシー。</p>
+        <div class="legal">
+          <a href="/support.html">Support</a>
+          <a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 SUGOITORI</div>
+  </footer>
+</body>
+</html>
